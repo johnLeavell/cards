@@ -2,6 +2,8 @@ class Card < ApplicationRecord
   require 'mini_magick'
   require 'tesseract'
 
+  belongs_to :owner, class_name: "User"
+
   # Instance method to extract text from an image
   def extract_text_from_image(image_path)
     image = MiniMagick::Image.open(image_path)
