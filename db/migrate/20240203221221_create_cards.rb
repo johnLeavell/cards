@@ -8,6 +8,7 @@ class CreateCards < ActiveRecord::Migration[7.1]
       t.integer :set_id
       t.string :rarity
       t.text :card_attributes
+      t.references :owner, null: false, foreign_key: { to_table: :users}
 
       t.timestamps
     end
