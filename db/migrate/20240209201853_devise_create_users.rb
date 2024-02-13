@@ -34,6 +34,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.1]
       # t.datetime :locked_at
 
       t.citext :username
+      t.citext :first_name
+      t.citext :last_name
       t.boolean :private
       t.integer :cards, default: 0
       t.integer :decks, default: 0

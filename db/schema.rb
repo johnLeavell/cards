@@ -34,6 +34,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_09_201853) do
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.citext "username"
+    t.citext "first_name"
+    t.citext "last_name"
     t.boolean "private"
     t.integer "cards", default: 0
     t.integer "decks", default: 0
